@@ -1,0 +1,104 @@
+.clearfix::before,
+.clearfix::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+img {
+	max-width: 100%;
+}
+.wrapper {
+	width: 90%;
+	margin: 0 auto;
+	background-color: #ccc;
+}
+h1,
+h2 {
+	text-align: center;
+}
+h1 {
+	font: 700 40px "Arial", sans-serif;
+	color: brown;
+}
+.block {
+	width: 32%;
+	float: left;
+	margin-left: 1%;
+}
+
+.card__title {
+	font: 500 25px "Arial";
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+.card {
+	position: relative;
+	cursor: pointer;
+}
+.bg {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	background-color: blue;
+}
+.card__text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 1;
+	font: 500 20px "Verdana";
+	color: #fff;
+	text-transform: uppercase;
+	transform: translate(-50%, -50%);
+}
+.gray-bg {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	background-color: rgba(214, 214, 214, 0.5);
+}
+
+.card__text-2 {
+	font: 500 16px "Verdana", sans-serif;
+	color: #fff;
+	background-color: green;
+	padding: 20px 30px;
+}
+
+.bg,
+.gray-bg,
+.card__text {
+	visibility: hidden;
+}
+
+.slideTop__bg {
+	visibility: hidden;
+	background-color: blue;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 0%;
+	text-align: center;
+
+	font: 500 25px "Arial";
+	color: #fff;
+	transition: all 1s ease;
+}
+
+.card-1:hover .bg,
+.card-1:hover .card__text,
+.card-2:hover .card__text-2,
+.card-2:hover .gray-bg {
+	visibility: visible;
+}
+.card-3:hover .slideTop__bg {
+	visibility: visible;
+	height: 100%;
+	padding: 50% 0 50% 0;
+}
